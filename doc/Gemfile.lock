@@ -1,0 +1,16 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    coderay (0.9.8)
+    haml (3.1.2)
+    sass (3.1.7)
+    xml-simple (1.1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  coderay
+  haml
+  sass
+  xml-simple

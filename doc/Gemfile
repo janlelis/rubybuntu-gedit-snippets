@@ -1,0 +1,6 @@
+source :rubygems
+
+gem 'xml-simple'
+gem 'haml'
+gem 'sass'
+gem 'coderay'

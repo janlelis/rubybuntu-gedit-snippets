@@ -29,12 +29,12 @@ end
 snippets = {}
 
 # Go through all xml files in parent directory
-Dir.entries(File.join(File.dirname(__FILE__), '..', 'snippets/')) .each do |filename|
+Dir.entries(File.join(File.dirname(__FILE__), '..')) .each do |filename|
   # For each file parse the xml and feed data into the output array
   if filename =~ /\.xml$/
     # Add current filename to the snippets collection hash
     current_snippets = snippets[filename.gsub('.xml', '').gsub("_", ' ').split(" ").map {|w| w.capitalize}.join(' ')] = []
-    data = XmlSimple.xml_in(File.join(File.dirname(__FILE__), '..', 'snippets/', filename))
+    data = XmlSimple.xml_in(File.join(File.dirname(__FILE__), '..', filename))
     data["snippet"].each do |snippet|
       current_snippets << Snippet.new(:tag => snippet["tag"].to_s,
                                       :description => snippet["description"].to_s,
