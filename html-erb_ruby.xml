@@ -2,7 +2,7 @@
 <!--
     RHTML Ruby code snippets
 -->
-<snippets language="rhtml">
+<snippets language="html-erb">
   <!--
       ERb Tags
   -->

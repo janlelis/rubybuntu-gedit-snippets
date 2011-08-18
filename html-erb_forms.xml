@@ -2,7 +2,7 @@
 <!--
     RHTML form helper snippets
 -->
-<snippets language="rhtml">
+<snippets language="html-erb">
   <!-- Form tag blocks -->
   <snippet>
     <text><![CDATA[<% form_tag $1do %>

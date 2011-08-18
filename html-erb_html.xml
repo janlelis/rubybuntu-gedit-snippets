@@ -2,7 +2,7 @@
 <!--
     RHTML Html tag snippets
 -->
-<snippets language="rhtml">
+<snippets language="html-erb">
   <!-- Generic tag helper -->
   <snippet>
     <text><![CDATA[<${1:div}>

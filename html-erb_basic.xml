@@ -2,7 +2,7 @@
 <!--
     Basic Rails View helper snippets
 -->
-<snippets language="rhtml">
+<snippets language="html-erb">
   <!--
       Additional helpers
   -->
