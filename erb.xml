@@ -14,7 +14,7 @@
   <snippet>
     <text><![CDATA[<% $0 -%>]]></text>
     <tag>%</tag>
-    <description>&lt;% ruby code block -%&gt;</description>
+    <description>&lt;% ruby code block %&gt;</description>
   </snippet>
   
   <!--

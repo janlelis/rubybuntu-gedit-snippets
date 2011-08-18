@@ -228,6 +228,15 @@
       <h1>gedit-snippets Documentation</h1>
       <ul>
         <li>
+          <a href='#Erb'>Erb</a>
+        </li>
+        <li>
+          <a href='#Html-erb'>Html-erb</a>
+        </li>
+        <li>
+          <a href='#Javascript-erb'>Javascript-erb</a>
+        </li>
+        <li>
           <a href='#Rails Activerecord Associations'>Rails Activerecord Associations</a>
         </li>
         <li>
@@ -249,13 +258,13 @@
           <a href='#Rhtml Html'>Rhtml Html</a>
         </li>
         <li>
-          <a href='#Rhtml Ruby'>Rhtml Ruby</a>
-        </li>
-        <li>
           <a href='#Ruby Basic'>Ruby Basic</a>
         </li>
         <li>
           <a href='#Ruby Collections'>Ruby Collections</a>
+        </li>
+        <li>
+          <a href='#Ruby-erb'>Ruby-erb</a>
         </li>
         <li>
           <a href='#Shoulda Actioncontroller'>Shoulda Actioncontroller</a>
@@ -269,9 +278,189 @@
         <li>
           <a href='#Snippet Tools'>Snippet Tools</a>
         </li>
+        <li>
+          <a href='#Xml-erb'>Xml-erb</a>
+        </li>
+        <li>
+          <a href='#Yml-erb'>Yml-erb</a>
+        </li>
       </ul>
     </div>
     <div class='sections'></div>
+    <div class='section'>
+      <a name='Erb'></a>
+      <h2>Erb</h2>
+      <div class='snippet'>
+        <h4>= - <%= block result %></h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%=</span> <span class="gv">$0</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>% - <% ruby code block %></h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="gv">$0</span> <span class="idl">-%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>do - do .. end</h4>
+        <div class='code'>
+          <pre><span class="r">do</span>&#x000A;        <span class="gv">$0</span>&#x000A;<span class="r">end</span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>doo - do |object| .. end</h4>
+        <div class='code'>
+          <pre><span class="r">do</span> |<span class="er">$</span>{<span class="i">1</span><span class="sy">:object</span>}|&#x000A;        <span class="gv">$0</span>&#x000A;<span class="r">end</span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>eacho - each do item</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:@list</span>}.each <span class="r">do</span> |<span class="er">$</span>{<span class="i">2</span><span class="sy">:item</span>}| <span class="r">do</span> <span class="idl">%&gt;</span></span>&#x000A;        $0&#x000A;<span class="il"><span class="idl">&lt;%</span> <span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>forin - for .. in .. end</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%=</span> <span class="r">for</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:element</span>} <span class="r">in</span> <span class="er">$</span>{<span class="i">2</span><span class="sy">:collection</span>}&#x000A;        <span class="er">$</span>{<span class="i">1</span><span class="sy">:element</span>}.<span class="gv">$0</span>&#x000A;<span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>if - if statement</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="r">if</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:logged_in?</span>} <span class="idl">%&gt;</span></span>&#x000A;        $0&#x000A;<span class="il"><span class="idl">&lt;%</span> <span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>ife - if ... else ... end</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="r">if</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:logged_in?</span>} <span class="idl">%&gt;</span></span>&#x000A;        $0&#x000A;<span class="il"><span class="idl">&lt;%</span> <span class="r">else</span> <span class="idl">%&gt;</span></span>&#x000A;        &#x000A;<span class="il"><span class="idl">&lt;%</span> <span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>end - end tag</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+    </div>
+    <div class='section'>
+      <a name='Html-erb'></a>
+      <h2>Html-erb</h2>
+      <div class='snippet'>
+        <h4>= - <%= block result %></h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%=</span> <span class="gv">$0</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>% - <% ruby code block %></h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="gv">$0</span> <span class="idl">-%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>do - do .. end</h4>
+        <div class='code'>
+          <pre><span class="r">do</span>&#x000A;        <span class="gv">$0</span>&#x000A;<span class="r">end</span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>doo - do |object| .. end</h4>
+        <div class='code'>
+          <pre><span class="r">do</span> |<span class="er">$</span>{<span class="i">1</span><span class="sy">:object</span>}|&#x000A;        <span class="gv">$0</span>&#x000A;<span class="r">end</span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>eacho - each do item</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:@list</span>}.each <span class="r">do</span> |<span class="er">$</span>{<span class="i">2</span><span class="sy">:item</span>}| <span class="r">do</span> <span class="idl">%&gt;</span></span>&#x000A;        $0&#x000A;<span class="il"><span class="idl">&lt;%</span> <span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>forin - for .. in .. end</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%=</span> <span class="r">for</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:element</span>} <span class="r">in</span> <span class="er">$</span>{<span class="i">2</span><span class="sy">:collection</span>}&#x000A;        <span class="er">$</span>{<span class="i">1</span><span class="sy">:element</span>}.<span class="gv">$0</span>&#x000A;<span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>if - if statement</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="r">if</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:logged_in?</span>} <span class="idl">%&gt;</span></span>&#x000A;        $0&#x000A;<span class="il"><span class="idl">&lt;%</span> <span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>ife - if ... else ... end</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="r">if</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:logged_in?</span>} <span class="idl">%&gt;</span></span>&#x000A;        $0&#x000A;<span class="il"><span class="idl">&lt;%</span> <span class="r">else</span> <span class="idl">%&gt;</span></span>&#x000A;        &#x000A;<span class="il"><span class="idl">&lt;%</span> <span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>end - end tag</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+    </div>
+    <div class='section'>
+      <a name='Javascript-erb'></a>
+      <h2>Javascript-erb</h2>
+      <div class='snippet'>
+        <h4>= - <%= block result %></h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%=</span> <span class="gv">$0</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>% - <% ruby code block %></h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="gv">$0</span> <span class="idl">-%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>do - do .. end</h4>
+        <div class='code'>
+          <pre><span class="r">do</span>&#x000A;        <span class="gv">$0</span>&#x000A;<span class="r">end</span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>doo - do |object| .. end</h4>
+        <div class='code'>
+          <pre><span class="r">do</span> |<span class="er">$</span>{<span class="i">1</span><span class="sy">:object</span>}|&#x000A;        <span class="gv">$0</span>&#x000A;<span class="r">end</span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>eacho - each do item</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:@list</span>}.each <span class="r">do</span> |<span class="er">$</span>{<span class="i">2</span><span class="sy">:item</span>}| <span class="r">do</span> <span class="idl">%&gt;</span></span>&#x000A;        $0&#x000A;<span class="il"><span class="idl">&lt;%</span> <span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>forin - for .. in .. end</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%=</span> <span class="r">for</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:element</span>} <span class="r">in</span> <span class="er">$</span>{<span class="i">2</span><span class="sy">:collection</span>}&#x000A;        <span class="er">$</span>{<span class="i">1</span><span class="sy">:element</span>}.<span class="gv">$0</span>&#x000A;<span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>if - if statement</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="r">if</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:logged_in?</span>} <span class="idl">%&gt;</span></span>&#x000A;        $0&#x000A;<span class="il"><span class="idl">&lt;%</span> <span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>ife - if ... else ... end</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="r">if</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:logged_in?</span>} <span class="idl">%&gt;</span></span>&#x000A;        $0&#x000A;<span class="il"><span class="idl">&lt;%</span> <span class="r">else</span> <span class="idl">%&gt;</span></span>&#x000A;        &#x000A;<span class="il"><span class="idl">&lt;%</span> <span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>end - end tag</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+    </div>
     <div class='section'>
       <a name='Rails Activerecord Associations'></a>
       <h2>Rails Activerecord Associations</h2>
@@ -733,64 +922,6 @@
       </div>
     </div>
     <div class='section'>
-      <a name='Rhtml Ruby'></a>
-      <h2>Rhtml Ruby</h2>
-      <div class='snippet'>
-        <h4>= - <%= block result %></h4>
-        <div class='code'>
-          <pre><span class="il"><span class="idl">&lt;%=</span> <span class="gv">$0</span> <span class="idl">%&gt;</span></span></pre>
-        </div>
-      </div>
-      <div class='snippet'>
-        <h4>% - <% ruby code block -%></h4>
-        <div class='code'>
-          <pre><span class="il"><span class="idl">&lt;%</span> <span class="gv">$0</span> <span class="idl">-%&gt;</span></span></pre>
-        </div>
-      </div>
-      <div class='snippet'>
-        <h4>do - do .. end</h4>
-        <div class='code'>
-          <pre><span class="r">do</span>&#x000A;        <span class="gv">$0</span>&#x000A;<span class="r">end</span></pre>
-        </div>
-      </div>
-      <div class='snippet'>
-        <h4>doo - do |object| .. end</h4>
-        <div class='code'>
-          <pre><span class="r">do</span> |<span class="er">$</span>{<span class="i">1</span><span class="sy">:object</span>}|&#x000A;        <span class="gv">$0</span>&#x000A;<span class="r">end</span></pre>
-        </div>
-      </div>
-      <div class='snippet'>
-        <h4>eacho - each do item</h4>
-        <div class='code'>
-          <pre><span class="il"><span class="idl">&lt;%</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:@list</span>}.each <span class="r">do</span> |<span class="er">$</span>{<span class="i">2</span><span class="sy">:item</span>}| <span class="r">do</span> <span class="idl">%&gt;</span></span>&#x000A;        $0&#x000A;<span class="il"><span class="idl">&lt;%</span> <span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
-        </div>
-      </div>
-      <div class='snippet'>
-        <h4>forin - for .. in .. end</h4>
-        <div class='code'>
-          <pre><span class="il"><span class="idl">&lt;%=</span> <span class="r">for</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:element</span>} <span class="r">in</span> <span class="er">$</span>{<span class="i">2</span><span class="sy">:collection</span>}&#x000A;        <span class="er">$</span>{<span class="i">1</span><span class="sy">:element</span>}.<span class="gv">$0</span>&#x000A;<span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
-        </div>
-      </div>
-      <div class='snippet'>
-        <h4>if - if statement</h4>
-        <div class='code'>
-          <pre><span class="il"><span class="idl">&lt;%</span> <span class="r">if</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:logged_in?</span>} <span class="idl">%&gt;</span></span>&#x000A;        $0&#x000A;<span class="il"><span class="idl">&lt;%</span> <span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
-        </div>
-      </div>
-      <div class='snippet'>
-        <h4>ife - if ... else ... end</h4>
-        <div class='code'>
-          <pre><span class="il"><span class="idl">&lt;%</span> <span class="r">if</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:logged_in?</span>} <span class="idl">%&gt;</span></span>&#x000A;        $0&#x000A;<span class="il"><span class="idl">&lt;%</span> <span class="r">else</span> <span class="idl">%&gt;</span></span>&#x000A;        &#x000A;<span class="il"><span class="idl">&lt;%</span> <span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
-        </div>
-      </div>
-      <div class='snippet'>
-        <h4>end - end tag</h4>
-        <div class='code'>
-          <pre><span class="il"><span class="idl">&lt;%</span> <span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
-        </div>
-      </div>
-    </div>
-    <div class='section'>
       <a name='Ruby Basic'></a>
       <h2>Ruby Basic</h2>
       <div class='snippet'>
@@ -1023,6 +1154,64 @@
         <h4>mapo - map elements do</h4>
         <div class='code'>
           <pre>map <span class="r">do</span> |<span class="er">$</span>{<span class="i">1</span><span class="sy">:element</span>}|&#x000A;        <span class="er">$</span>{<span class="i">1</span><span class="sy">:element</span>}.<span class="gv">$0</span>&#x000A;<span class="r">end</span></pre>
+        </div>
+      </div>
+    </div>
+    <div class='section'>
+      <a name='Ruby-erb'></a>
+      <h2>Ruby-erb</h2>
+      <div class='snippet'>
+        <h4>= - <%= block result %></h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%=</span> <span class="gv">$0</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>% - <% ruby code block %></h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="gv">$0</span> <span class="idl">-%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>do - do .. end</h4>
+        <div class='code'>
+          <pre><span class="r">do</span>&#x000A;        <span class="gv">$0</span>&#x000A;<span class="r">end</span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>doo - do |object| .. end</h4>
+        <div class='code'>
+          <pre><span class="r">do</span> |<span class="er">$</span>{<span class="i">1</span><span class="sy">:object</span>}|&#x000A;        <span class="gv">$0</span>&#x000A;<span class="r">end</span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>eacho - each do item</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:@list</span>}.each <span class="r">do</span> |<span class="er">$</span>{<span class="i">2</span><span class="sy">:item</span>}| <span class="r">do</span> <span class="idl">%&gt;</span></span>&#x000A;        $0&#x000A;<span class="il"><span class="idl">&lt;%</span> <span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>forin - for .. in .. end</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%=</span> <span class="r">for</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:element</span>} <span class="r">in</span> <span class="er">$</span>{<span class="i">2</span><span class="sy">:collection</span>}&#x000A;        <span class="er">$</span>{<span class="i">1</span><span class="sy">:element</span>}.<span class="gv">$0</span>&#x000A;<span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>if - if statement</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="r">if</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:logged_in?</span>} <span class="idl">%&gt;</span></span>&#x000A;        $0&#x000A;<span class="il"><span class="idl">&lt;%</span> <span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>ife - if ... else ... end</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="r">if</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:logged_in?</span>} <span class="idl">%&gt;</span></span>&#x000A;        $0&#x000A;<span class="il"><span class="idl">&lt;%</span> <span class="r">else</span> <span class="idl">%&gt;</span></span>&#x000A;        &#x000A;<span class="il"><span class="idl">&lt;%</span> <span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>end - end tag</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
         </div>
       </div>
     </div>
@@ -1288,10 +1477,126 @@
         </div>
       </div>
     </div>
+    <div class='section'>
+      <a name='Xml-erb'></a>
+      <h2>Xml-erb</h2>
+      <div class='snippet'>
+        <h4>= - <%= block result %></h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%=</span> <span class="gv">$0</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>% - <% ruby code block %></h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="gv">$0</span> <span class="idl">-%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>do - do .. end</h4>
+        <div class='code'>
+          <pre><span class="r">do</span>&#x000A;        <span class="gv">$0</span>&#x000A;<span class="r">end</span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>doo - do |object| .. end</h4>
+        <div class='code'>
+          <pre><span class="r">do</span> |<span class="er">$</span>{<span class="i">1</span><span class="sy">:object</span>}|&#x000A;        <span class="gv">$0</span>&#x000A;<span class="r">end</span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>eacho - each do item</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:@list</span>}.each <span class="r">do</span> |<span class="er">$</span>{<span class="i">2</span><span class="sy">:item</span>}| <span class="r">do</span> <span class="idl">%&gt;</span></span>&#x000A;        $0&#x000A;<span class="il"><span class="idl">&lt;%</span> <span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>forin - for .. in .. end</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%=</span> <span class="r">for</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:element</span>} <span class="r">in</span> <span class="er">$</span>{<span class="i">2</span><span class="sy">:collection</span>}&#x000A;        <span class="er">$</span>{<span class="i">1</span><span class="sy">:element</span>}.<span class="gv">$0</span>&#x000A;<span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>if - if statement</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="r">if</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:logged_in?</span>} <span class="idl">%&gt;</span></span>&#x000A;        $0&#x000A;<span class="il"><span class="idl">&lt;%</span> <span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>ife - if ... else ... end</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="r">if</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:logged_in?</span>} <span class="idl">%&gt;</span></span>&#x000A;        $0&#x000A;<span class="il"><span class="idl">&lt;%</span> <span class="r">else</span> <span class="idl">%&gt;</span></span>&#x000A;        &#x000A;<span class="il"><span class="idl">&lt;%</span> <span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>end - end tag</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+    </div>
+    <div class='section'>
+      <a name='Yml-erb'></a>
+      <h2>Yml-erb</h2>
+      <div class='snippet'>
+        <h4>= - <%= block result %></h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%=</span> <span class="gv">$0</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>% - <% ruby code block %></h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="gv">$0</span> <span class="idl">-%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>do - do .. end</h4>
+        <div class='code'>
+          <pre><span class="r">do</span>&#x000A;        <span class="gv">$0</span>&#x000A;<span class="r">end</span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>doo - do |object| .. end</h4>
+        <div class='code'>
+          <pre><span class="r">do</span> |<span class="er">$</span>{<span class="i">1</span><span class="sy">:object</span>}|&#x000A;        <span class="gv">$0</span>&#x000A;<span class="r">end</span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>eacho - each do item</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:@list</span>}.each <span class="r">do</span> |<span class="er">$</span>{<span class="i">2</span><span class="sy">:item</span>}| <span class="r">do</span> <span class="idl">%&gt;</span></span>&#x000A;        $0&#x000A;<span class="il"><span class="idl">&lt;%</span> <span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>forin - for .. in .. end</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%=</span> <span class="r">for</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:element</span>} <span class="r">in</span> <span class="er">$</span>{<span class="i">2</span><span class="sy">:collection</span>}&#x000A;        <span class="er">$</span>{<span class="i">1</span><span class="sy">:element</span>}.<span class="gv">$0</span>&#x000A;<span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>if - if statement</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="r">if</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:logged_in?</span>} <span class="idl">%&gt;</span></span>&#x000A;        $0&#x000A;<span class="il"><span class="idl">&lt;%</span> <span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>ife - if ... else ... end</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="r">if</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:logged_in?</span>} <span class="idl">%&gt;</span></span>&#x000A;        $0&#x000A;<span class="il"><span class="idl">&lt;%</span> <span class="r">else</span> <span class="idl">%&gt;</span></span>&#x000A;        &#x000A;<span class="il"><span class="idl">&lt;%</span> <span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>end - end tag</h4>
+        <div class='code'>
+          <pre><span class="il"><span class="idl">&lt;%</span> <span class="r">end</span> <span class="idl">%&gt;</span></span></pre>
+        </div>
+      </div>
+    </div>
     <div id='footer'>
       <p><code>gedit-snippets</code> is Copyright (C) 2009 Christoph Olszowka <christoph at olszowka dot de>, It is free software, and may be redistributed under the terms specified in the MIT-LICENSE file.</p>
       <p>You can find the project on <a href="http://github.com/colszowka/gedit-snippets">github</a> and on my <a href="http://blog.olszowka.de">blog</a></p>
-      <p>This documentation generated on Thu Aug 18 17:55:17 +0200 2011</p>
+      <p>This documentation generated on Thu Aug 18 18:46:23 +0200 2011</p>
     </div>
   </body>
 </html>
